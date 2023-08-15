@@ -5,7 +5,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class UseProtorype {
   public static void main(String[] args) {
-    ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext("classpath:beanP.xml");
+    ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext("classpath:beans/beanP.xml");
 
     Employee_Secretary Boris = ctx.getBean("secretaryCtx", Employee_Secretary.class);
     Employee_Secretary Ann = ctx.getBean("secretaryCtx", Employee_Secretary.class);

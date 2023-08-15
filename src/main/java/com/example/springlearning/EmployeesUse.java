@@ -14,7 +14,7 @@ public class EmployeesUse {
     /*System.out.println(boss.getTasks());
     System.out.println(secretary.getTasks());*/
 
-    ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext("classpath:applicationContext.xml");
+    ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext("classpath:beans/applicationContext.xml");
     Employee Boris = ctx.getBean("employeeCtx", Employee.class);
     System.out.println(Boris.getTasks());
     System.out.println(Boris.getReport());

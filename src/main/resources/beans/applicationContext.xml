@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+    <context:property-placeholder location="../application.properties"/>
+    <bean id="reportCtx" class="com.example.springlearning.Report">
+
+    </bean>
+    <bean id="employeeCtx" class="com.example.springlearning.Employee_Manager">
+        <constructor-arg ref="reportCtx">
+
+        </constructor-arg>
+        <property name="email" value="${email}">
+
+        </property>
+        <property name="companyName" value="${companyName}">
+
+        </property>
+    </bean>
+
+    <bean id="secretaryCtx" class="com.example.springlearning.Employee_Secretary">
+        <property name="newReport" ref="reportCtx">
+
+        </property>
+        <property name="email" value="secretary@spring.com">
+
+        </property>
+        <property name="companyName" value="Spring">
+
+        </property>
+    </bean>
+</beans>
