@@ -6,6 +6,14 @@ public class Employee_Manager implements Employee {
   private String email;
   private String companyName;
 
+  // Metodo Init
+  public void init() {
+    System.out.println("Inside init method. Here would be the task to be executed before bean is ready.");
+  }
+  // Metodo Destroy
+  public void destroy() {
+    System.out.println("Inside destroy method. Here would be the task to be executed after bean is ready.");
+  }
   public Employee_Manager(Report_Creation newReport) {
     this.newReport = newReport;
   }
