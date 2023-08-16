@@ -1,4 +1,4 @@
-package es.example.springlearning;
+package es.example.springlearning;  
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
