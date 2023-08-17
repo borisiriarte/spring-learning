@@ -11,6 +11,12 @@ public class MainStructures {
     Employee employee = ctx.getBean("employee_FinancialManager", Employee.class);
     System.out.println(employee.getTasks());
     System.out.println(employee.getReport());
+
+    Employee_FinancialManager manager = ctx.getBean("employee_FinancialManager", Employee_FinancialManager.class);
+
+    System.out.println(manager.getCompanyName());
+    System.out.println(manager.getEmail());
+
     /*Employee Boris = ctx.getBean("employee_SeniorSalesman", Employee.class);
     Employee Anna = ctx.getBean("employee_SeniorSalesman", Employee.class);
 
